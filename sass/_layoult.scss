@@ -18,3 +18,21 @@
 
     border-bottom: 1px solid var(--clr-grey-200);
 }
+
+.nav {
+    flex: 0 0 18%;
+    align-self: stretch;
+
+    &__list {
+        display: flex;
+        height: 100%;
+
+        &--row {
+            flex-direction: row;
+        }
+    }
+
+    &__item {
+        list-style: none;
+    }
+}
