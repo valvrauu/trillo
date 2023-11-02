@@ -4,3 +4,17 @@
     background: var(--clr-grey-200);
     box-shadow: var(--shadow-dark);
 }
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 7rem;
+
+    background: var(--clr-ntrl-min);
+
+    font-size: 1.4rem;
+
+    border-bottom: 1px solid var(--clr-grey-200);
+}
