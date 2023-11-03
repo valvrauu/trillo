@@ -1,0 +1,126 @@
+.logo {
+    margin-left: 2rem;
+    max-height: 3.25rem;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 40%;
+
+    &__input {
+        width: 90%;
+
+        margin-right: -3.25rem;
+        padding: .7rem 2rem;
+
+        color: inherit;
+        background: var(--clr-grey-200);
+
+        font-family: inherit;
+        font-size: inherit;
+
+        border: none;
+        border-radius: 100px;
+        transition: all .2s;
+
+        &:focus {
+            outline: none;
+            width: 100%;
+            background: var(--clr-grey-300);
+        }
+
+        &::-webkit-input-placeholder {
+            color: var(--clr-grey-400);
+            font-weight: 100;
+        }
+    }
+
+    &__input:focus + &__button {
+        background: var(--clr-grey-300);
+    }
+
+    &__button {
+        background: var(--clr-grey-200);
+
+        border: none;
+        cursor: pointer;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:active {
+            transform: translateY(2px);
+        }
+    }
+
+    &__icon {
+        max-width: 2rem;
+        max-height: 2rem;
+
+        fill: var(--clr-grey-500);
+    }
+}
+
+.user {
+    height: 100%;
+
+    & > * {
+        display: flex;
+        align-items: center;
+
+        padding: 0 2rem;
+        height: inherit;
+
+        cursor: pointer;
+    }
+
+    & > *:hover {
+        background: var(--clr-grey-200);
+    }
+
+    &__bookmark, &__chat {
+        position: relative;
+
+        &::after {
+            content: attr(data-notification);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: absolute;
+            top: 1.5rem;
+            right: 1rem;
+
+            width: 1.75rem;
+            height: 1.75rem;
+
+            color: var(--clr-ntrl-min);
+            background: var(--clr-primary);
+
+            font-size: .8rem;
+
+            border-radius: 50%;
+        }
+    }
+
+    &__icon {
+        fill: var(--clr-grey-600);
+
+        max-width: 2.25rem;
+        max-height: 2.25rem;
+    }
+
+    &__profile {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__img {
+        max-height: 3.75rem;
+        border-radius: 50%;
+    }
+}

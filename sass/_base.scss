@@ -1,0 +1,52 @@
+:root {
+    /* Colors */
+        --clr-primary: #eb2f64;
+        --clr-primary-light: #FF3366;
+        --clr-primary-dark: #BA265D;
+
+        --clr-grey-100: #faf9f9;
+        --clr-grey-200: #f4f2f2;
+        --clr-grey-300: #f0eeee;
+        --clr-grey-400: #ccc;
+        --clr-grey-500: #999;
+        --clr-grey-600: #777;
+        --clr-grey-700: #333;
+
+        --clr-ntrl-min: #fff;
+        --clr-ntrl-max: #000;
+
+    /* Shadows */
+        --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    color: var(--clr-grey-600);
+    background: linear-gradient(to right bottom, var(--clr-primary-light), var(--clr-primary-dark));
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+}
