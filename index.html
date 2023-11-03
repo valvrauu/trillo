@@ -3,11 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
-        
+
         <title>trillo &mdash; Your all-in-one booking app</title>
     </head>
     <body>
@@ -56,8 +56,64 @@
                 </nav>
             </header>
             <div class="content-wrap">
-                <nav class="nav">
-                    <!-- Nav -->
+                <nav class="nav nav--dark">
+                    <ul class="nav__list nav__list--column nav__list--top-md-space">
+                        <li class="nav__item nav__item--pink-animation nav__item--active">
+                            <a href="#" class="nav__link">
+                                <div class="service">
+                                    <svg class="service__icon">
+                                        <use href="assets/img/sprite.svg#icon-home"></use>
+                                    </svg>
+
+                                    <span class="service__text">Hotel</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav__item nav__item--pink-animation">
+                            <a href="#" class="nav__link">
+                                <div class="service">
+                                    <svg class="service__icon">
+                                        <use href="assets/img/sprite.svg#icon-aircraft-take-off"></use>
+                                    </svg>
+
+                                    <span class="service__text">Flight</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav__item nav__item--pink-animation">
+                            <a href="#" class="nav__link">
+                                <div class="service">
+                                    <svg class="service__icon">
+                                        <use href="assets/img/sprite.svg#icon-key"></use>
+                                    </svg>
+
+                                    <span class="service__text">Car rental</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav__item nav__item--pink-animation">
+                            <a href="#" class="nav__link">
+                                <div class="service">
+                                    <svg class="service__icon">
+                                        <use href="assets/img/sprite.svg#icon-map"></use>
+                                    </svg>
+
+                                    <span class="service__text">Tours</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav__item nav__item--end-column">
+                            <div class="copyright">
+                                <p class="copyright__text">
+                                    &copy; <span class="copyright__year"></span> by trillo. All rights reserved.
+                                </p>
+
+                                <script>
+                                    document.querySelector('.copyright__year').textContent = new Date().getFullYear();
+                                </script>
+                            </div>
+                        </li>
+                    </ul>
                 </nav>
                 <main class="main">
                     <!-- Main -->
