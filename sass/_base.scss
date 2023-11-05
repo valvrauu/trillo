@@ -21,6 +21,13 @@
         --shadow-dark-xsm: 0 2rem 5rem rgba(0, 0, 0, .06);
 }
 
+@keyframes pulsate {
+    50% {
+        transform: scale(1.05);
+        box-shadow: var(--shadow-dark-sm);
+    }
+}
+
 *,
 *::before,
 *::after {

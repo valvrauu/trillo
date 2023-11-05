@@ -13,7 +13,14 @@
   --clr-ntrl-min: #fff;
   --clr-ntrl-max: #000;
   /* Shadows */
-  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3); }
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3);
+  --shadow-dark-sm: 0 1rem 4rem rgba(0, 0, 0, .25);
+  --shadow-dark-xsm: 0 2rem 5rem rgba(0, 0, 0, .06); }
+
+@keyframes pulsate {
+  50% {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-dark-sm); } }
 
 *,
 *::before,
@@ -136,6 +143,77 @@ body {
   font-size: 1.2rem;
   text-align: center; }
 
+.gallery {
+  display: flex; }
+  .gallery__img {
+    display: block;
+    width: 100%; }
+
+.overview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  border-bottom: 1px solid var(--clr-grey-200); }
+
+.primary-title {
+  padding: 1.5rem 0 1.5rem 3rem;
+  font-size: 2.25rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .rating__icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--clr-primary); }
+  .rating--overall {
+    flex-direction: column;
+    align-self: stretch;
+    padding: 0 2.25rem;
+    color: var(--clr-ntrl-min);
+    background: var(--clr-primary); }
+  .rating__average {
+    margin-bottom: -3px;
+    font-size: 2.25rem;
+    font-weight: 300; }
+  .rating__votes {
+    font-size: .8rem;
+    text-transform: uppercase; }
+
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  font-size: 1.2rem; }
+  .location__icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--clr-primary); }
+  .location--end-row {
+    margin-left: auto; }
+
+.btn--primary {
+  display: block;
+  padding-bottom: 2px;
+  color: var(--clr-primary);
+  background: transparent;
+  font-size: inherit;
+  border: none;
+  border-bottom: 1px solid currentColor;
+  cursor: pointer;
+  transition: all .2s; }
+  .btn--primary:hover {
+    color: var(--clr-grey-700); }
+  .btn--primary:focus {
+    outline: none;
+    animation: pulsate 1s infinite; }
+
 .container {
   max-width: 120rem;
   background: var(--clr-grey-200);
@@ -150,7 +228,7 @@ body {
   font-size: 1.4rem;
   border-bottom: 1px solid var(--clr-grey-200); }
 
-.content-wrap {
+.flex-container {
   display: flex; }
 
 .nav {
@@ -200,3 +278,6 @@ body {
     color: inherit;
     text-decoration: none;
     text-transform: uppercase; }
+
+.main {
+  background: var(--clr-ntrl-min); }
