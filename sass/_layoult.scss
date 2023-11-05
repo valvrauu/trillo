@@ -19,7 +19,7 @@
     border-bottom: 1px solid var(--clr-grey-200);
 }
 
-.content-wrap {
+.flex-container {
     display: flex;
 }
 
@@ -110,4 +110,8 @@
         text-decoration: none;
         text-transform: uppercase;
     }
+}
+
+.main {
+    background: var(--clr-ntrl-min);
 }
