@@ -234,11 +234,39 @@
 }
 
 .btn {
+    position: relative;
     text-decoration: none;
 
     &__icon {
         margin-left: 3px;
         transition: margin-left .2s;
+    }
+
+    &__visible {
+        display: block;
+
+        padding: 2rem 7.5rem;
+        width: 100%;
+        height: 100%;
+
+        transition: all .2s;
+    }
+
+    &__invisible {
+        position: absolute;
+        top: -100%;
+        left: 0;
+
+        padding: 2rem 0;
+        width: 100%;
+        height: 100%;
+
+        transition: all .2s;
+    }
+
+    &--center {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     &--primary {
@@ -269,9 +297,38 @@
         }
     }
 
-    &--center {
-        margin-left: auto;
-        margin-right: auto;
+    &--secondary {
+        color: var(--clr-ntrl-min);
+        background: linear-gradient(to right, var(--clr-primary-light), var(--clr-primary-dark));
+
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-transform: uppercase;
+
+        border: none;
+        border-radius: 100px;
+
+        cursor: pointer;
+        overflow: hidden;
+
+        transition: all .2s;
+
+        &:hover {
+            background: linear-gradient(to left, var(--clr-primary-light), var(--clr-primary-dark));
+
+            .btn__visible {
+                transform: translateY(100%);
+            }
+
+            .btn__invisible {
+                top: 0;
+            }
+        }
+
+        &:focus {
+            outline: none;
+            animation: pulsate 1s infinite;
+        }
     }
 }
 
@@ -388,4 +445,10 @@
             margin-left: auto;
         }
     }
+}
+
+.secondary-title {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
 }
