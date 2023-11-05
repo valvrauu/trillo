@@ -200,10 +200,28 @@ body {
     margin-left: auto; }
 
 .btn {
+  position: relative;
   text-decoration: none; }
   .btn__icon {
     margin-left: 3px;
     transition: margin-left .2s; }
+  .btn__visible {
+    display: block;
+    padding: 2rem 7.5rem;
+    width: 100%;
+    height: 100%;
+    transition: all .2s; }
+  .btn__invisible {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    padding: 2rem 0;
+    width: 100%;
+    height: 100%;
+    transition: all .2s; }
+  .btn--center {
+    margin-left: auto;
+    margin-right: auto; }
   .btn--primary {
     display: block;
     padding-bottom: 2px;
@@ -221,9 +239,26 @@ body {
     .btn--primary:focus {
       outline: none;
       animation: pulsate 1s infinite; }
-  .btn--center {
-    margin-left: auto;
-    margin-right: auto; }
+  .btn--secondary {
+    color: var(--clr-ntrl-min);
+    background: linear-gradient(to right, var(--clr-primary-light), var(--clr-primary-dark));
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .2s; }
+    .btn--secondary:hover {
+      background: linear-gradient(to left, var(--clr-primary-light), var(--clr-primary-dark)); }
+      .btn--secondary:hover .btn__visible {
+        transform: translateY(100%); }
+      .btn--secondary:hover .btn__invisible {
+        top: 0; }
+    .btn--secondary:focus {
+      outline: none;
+      animation: pulsate 1s infinite; }
 
 .paragraph--md-text {
   font-size: 1.4rem; }
@@ -297,6 +332,11 @@ body {
     font-size: 2.2rem; }
     .testimonial__average--end-row {
       margin-left: auto; }
+
+.secondary-title {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase; }
 
 .container {
   max-width: 120rem;
@@ -406,3 +446,10 @@ body {
   flex-direction: column;
   gap: 3.5rem;
   flex: 1; }
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 3.5rem 0; }
