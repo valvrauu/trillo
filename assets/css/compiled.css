@@ -247,7 +247,7 @@ body {
       flex-direction: row; }
     .nav__list--column {
       flex-direction: column; }
-    .nav__list--top-md-space {
+    .nav__list--md-space-top {
       padding-top: 3.5rem; }
   .nav__item {
     position: relative;
