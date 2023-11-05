@@ -234,6 +234,13 @@
 }
 
 .btn {
+    text-decoration: none;
+
+    &__icon {
+        margin-left: 3px;
+        transition: margin-left .2s;
+    }
+
     &--primary {
         display: block;
         padding-bottom: 2px;
@@ -250,11 +257,135 @@
 
         &:hover {
             color: var(--clr-grey-700);
+
+            .btn__icon {
+                margin-left: 8px;
+            }
         }
 
         &:focus {
             outline: none;
             animation: pulsate 1s infinite;
+        }
+    }
+
+    &--center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.paragraph {
+    &--md-text {
+        font-size: 1.4rem;
+    }
+
+    &--md-space-bottom {
+        margin-bottom: 2rem;
+    }
+}
+
+.recommend {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: var(--clr-grey-500);
+
+    font-size: 1.3rem;
+
+    &__img {
+        width: 4rem;
+        height: 4rem;
+        margin-right: -1.5rem;
+
+        border-radius: 50%;
+        border: 3px solid var(--clr-ntrl-min);
+        box-sizing: content-box;
+    }
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    position: relative;
+
+    padding: 3rem;
+
+    background: var(--clr-ntrl-min);
+
+    overflow: hidden;
+    isolation: isolate;
+    box-shadow: var(--shadow-dark-xsm);
+
+    &::before {
+        content: '\201C';
+
+        position: absolute;
+        top: -2.75rem;
+        left: -1rem;
+
+        color: var(--clr-grey-200);
+
+        font-size: 20rem;
+        font-family: sans-serif;
+        line-height: 1;
+
+        z-index: -1;
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    &__img {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+    }
+
+    &__user-box {
+        display: flex;
+        flex-direction: column;
+        gap: .4rem;
+    }
+
+    &__user {
+        display: flex;
+
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    &__link {
+        color: inherit;
+
+        text-decoration: none;
+        text-transform: uppercase;
+        font-style: normal;
+    }
+
+    &__date {
+        display: flex;
+
+        &-text {
+            color: var(--clr-grey-500);
+
+            font-size: 1rem;
+            font-style: normal;
+        }
+    }
+
+    &__average {
+        color: var(--clr-primary);
+        font-size: 2.2rem;
+
+        &--end-row {
+            margin-left: auto;
         }
     }
 }
