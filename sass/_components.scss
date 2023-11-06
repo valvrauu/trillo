@@ -35,6 +35,11 @@
             color: var(--clr-grey-400);
             font-weight: 100;
         }
+
+        @media only screen and (max-width: $bp-small) {
+            width: 100%;
+            border-radius: 0;
+        }
     }
 
     &__input:focus + &__button {
@@ -61,6 +66,12 @@
         max-height: 2rem;
 
         fill: var(--clr-grey-500);
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        justify-content: stretch;
+        flex: 0 0 100%;
+        order: 1;
     }
 }
 

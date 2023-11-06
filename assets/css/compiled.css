@@ -94,6 +94,10 @@ body {
     .search__input::-webkit-input-placeholder {
       color: var(--clr-grey-400);
       font-weight: 100; }
+    @media only screen and (max-width: 37.5em) {
+      .search__input {
+        width: 100%;
+        border-radius: 0; } }
   .search__input:focus + .search__button {
     background: var(--clr-grey-300); }
   .search__button {
@@ -108,6 +112,11 @@ body {
     max-width: 2rem;
     max-height: 2rem;
     fill: var(--clr-grey-500); }
+  @media only screen and (max-width: 37.5em) {
+    .search {
+      justify-content: stretch;
+      flex: 0 0 100%;
+      order: 1; } }
 
 .user {
   height: 100%; }
@@ -370,6 +379,13 @@ body {
   background: var(--clr-ntrl-min);
   font-size: 1.4rem;
   border-bottom: 1px solid var(--clr-grey-200); }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      flex-wrap: wrap;
+      gap: 2rem; } }
+  @media only screen and (max-width: 14.375em) {
+    .header {
+      justify-content: center; } }
 
 .flex-container {
   display: flex; }
