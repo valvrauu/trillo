@@ -321,6 +321,9 @@ body {
     border-radius: 50%;
     border: 3px solid var(--clr-ntrl-min);
     box-sizing: content-box; }
+  @media only screen and (max-width: 37.5em) {
+    .recommend {
+      flex-direction: column; } }
 
 .testimonial {
   display: flex;
@@ -514,11 +517,18 @@ body {
   background: var(--clr-grey-100);
   font-size: 1.4rem;
   border-bottom: 1px solid var(--clr-grey-200); }
+  @media only screen and (max-width: 56.25em) {
+    .details {
+      flex-direction: column;
+      padding: 2rem; } }
 
 .description-box {
   flex: 0 0 60%;
   padding: 3rem;
   box-shadow: var(--shadow-dark-xsm); }
+  @media only screen and (max-width: 56.25em) {
+    .description-box {
+      padding: 2rem; } }
 
 .testimonials-box {
   display: flex;
