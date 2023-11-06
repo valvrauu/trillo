@@ -188,6 +188,10 @@ body {
   justify-content: space-between;
   gap: 3rem;
   border-bottom: 1px solid var(--clr-grey-200); }
+  @media only screen and (max-width: 37.5em) {
+    .overview {
+      flex-direction: column;
+      gap: 1.5rem; } }
 
 .primary-title {
   padding: 1.5rem 0 1.5rem 3rem;
@@ -195,6 +199,9 @@ body {
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 1px; }
+  @media only screen and (max-width: 37.5em) {
+    .primary-title {
+      padding: 1.5rem 0; } }
 
 .rating {
   display: flex;
@@ -230,6 +237,9 @@ body {
     fill: var(--clr-primary); }
   .location--end-row {
     margin-left: auto; }
+    @media only screen and (max-width: 37.5em) {
+      .location--end-row {
+        margin-left: 0; } }
 
 .btn {
   position: relative;

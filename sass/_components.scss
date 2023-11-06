@@ -182,6 +182,11 @@
     gap: 3rem;
 
     border-bottom: 1px solid var(--clr-grey-200);
+
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
 }
 
 .primary-title {
@@ -191,6 +196,10 @@
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 1px;
+
+    @media only screen and (max-width: $bp-small) {
+        padding: 1.5rem 0;
+    }
 }
 
 .rating {
@@ -245,6 +254,10 @@
 
     &--end-row {
         margin-left: auto;
+
+        @media only screen and (max-width: $bp-small) {
+            margin-left: 0;
+        }
     }
 }
 
