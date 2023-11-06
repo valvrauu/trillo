@@ -389,6 +389,9 @@ body {
 
 .flex-container {
   display: flex; }
+  @media only screen and (max-width: 56.25em) {
+    .flex-container {
+      flex-direction: column; } }
 
 .nav {
   flex: 0 0 18%;
