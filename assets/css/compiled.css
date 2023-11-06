@@ -40,6 +40,15 @@ html {
   min-height: 100dvh;
   font-size: 62.5%;
   box-sizing: border-box; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 52.5%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 42.5%; } }
+  @media only screen and (max-width: 26.25em) {
+    html {
+      font-size: 37.5%; } }
 
 body {
   display: flex;
@@ -52,7 +61,11 @@ body {
   background: linear-gradient(to right bottom, var(--clr-primary-light), var(--clr-primary-dark));
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
-  line-height: 1.6; }
+  line-height: 1.6;
+  overflow-x: hidden; }
+  @media only screen and (max-width: 37.5em) {
+    body {
+      padding: 0; } }
 
 .logo {
   margin-left: 2rem;
