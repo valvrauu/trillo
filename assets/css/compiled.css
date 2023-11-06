@@ -453,9 +453,13 @@ body {
           display: inline-block;
           width: 1rem;
           height: 1rem;
-          background: var(--clr-primary);
-          mask-image: url("../img/chevron-thin-right.svg");
-          mask-size: cover; }
+          background: url("../img/chevron-thin-right.svg");
+          background-size: cover; }
+          @supports (-webkit-mask-image: none) or (mask-image: none) {
+            .nav__list--description > *::before {
+              background: var(--clr-primary);
+              mask-image: url("../img/chevron-thin-right.svg");
+              mask-size: cover; } }
         @media only screen and (max-width: 56.25em) {
           .nav__list--description > * {
             flex: 0 0 50% !important;
