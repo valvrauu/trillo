@@ -165,12 +165,16 @@ body {
     height: 1.75rem; }
   .service__text {
     font-size: 1.4rem; }
+  @media only screen and (max-width: 56.25em) {
+    .service {
+      justify-content: center; } }
 
-.copyright__text {
-  padding: 2.5rem;
-  color: var(--clr-grey-400);
-  font-size: 1.2rem;
-  text-align: center; }
+.copyright {
+  padding: 2.5rem; }
+  .copyright__text {
+    color: var(--clr-grey-400);
+    font-size: 1.2rem;
+    text-align: center; }
 
 .gallery {
   display: flex; }
@@ -408,8 +412,17 @@ body {
       flex-direction: row; }
     .nav__list--column {
       flex-direction: column; }
+      @media only screen and (max-width: 56.25em) {
+        .nav__list--column {
+          flex-direction: row; } }
+      @media only screen and (max-width: 26.25em) {
+        .nav__list--column {
+          flex-direction: column; } }
     .nav__list--md-space-top {
       padding-top: 3.5rem; }
+      @media only screen and (max-width: 56.25em) {
+        .nav__list--md-space-top {
+          padding-top: 0; } }
     .nav__list--description {
       flex-wrap: wrap;
       gap: .7rem 0;
@@ -430,6 +443,13 @@ body {
           background: var(--clr-primary);
           mask-image: url("../img/chevron-thin-right.svg");
           mask-size: cover; }
+        @media only screen and (max-width: 56.25em) {
+          .nav__list--description > * {
+            flex: 0 0 50% !important;
+            justify-content: start !important; } }
+      @media only screen and (max-width: 14.375em) {
+        .nav__list--description {
+          flex-direction: column; } }
   .nav__item {
     position: relative;
     list-style: none;
@@ -453,6 +473,17 @@ body {
     .nav__item--active::before {
       transform: scaleY(1);
       width: 100%; }
+    @media only screen and (max-width: 56.25em) {
+      .nav__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1; } }
+  .nav__item:has(.copyright) {
+    /* remove component copyright */ }
+    @media only screen and (max-width: 56.25em) {
+      .nav__item:has(.copyright) {
+        display: none; } }
   .nav__link--big-space {
     padding: 1.5rem 3rem; }
   .nav__link--upper {
