@@ -17,10 +17,23 @@
     font-size: 1.4rem;
 
     border-bottom: 1px solid var(--clr-grey-200);
+
+    @media only screen and (max-width: $bp-small) {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-tiny) {
+        justify-content: center;
+    }
 }
 
 .flex-container {
     display: flex;
+
+    @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+    }
 }
 
 .nav {
@@ -44,10 +57,22 @@
 
         &--column {
             flex-direction: column;
+
+            @media only screen and (max-width: $bp-medium) {
+                flex-direction: row;
+            }
+
+            @media only screen and (max-width: $bp-xsmall) {
+                flex-direction: column;
+            }
         }
 
         &--md-space-top {
             padding-top: 3.5rem;
+
+            @media only screen and (max-width: $bp-medium) {
+                padding-top: 0;
+            }
         }
 
         &--description {
@@ -75,9 +100,19 @@
                     height: 1rem;
 
                     background: var(--clr-primary);
-                    mask-image: url('/assets/img/chevron-thin-right.svg');
+                    mask-image: url("../img/chevron-thin-right.svg");
                     mask-size: cover;
                 }
+
+                @media only screen and (max-width: $bp-medium) {
+                    flex: 0 0 50% !important;
+                    justify-content: start !important;
+                }
+
+            }
+
+            @media only screen and (max-width: $bp-tiny) {
+                flex-direction: column;
             }
         }
     }
@@ -127,6 +162,19 @@
                 width: 100%;
             }
         }
+
+        @media only screen and (max-width: $bp-medium) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+        }
+    }
+
+    &__item:has(.copyright) { /* remove component copyright */
+        @media only screen and (max-width: $bp-medium) {
+            display: none;
+        }
     }
 
     &__link {
@@ -165,6 +213,11 @@
     font-size: 1.4rem;
 
     border-bottom: 1px solid var(--clr-grey-200);
+
+    @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+        padding: 2rem;
+    }
 }
 
 .description-box {
@@ -173,6 +226,10 @@
     padding: 3rem;
 
     box-shadow: var(--shadow-dark-xsm);
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+    }
 }
 
 .testimonials-box {

@@ -21,6 +21,13 @@
         --shadow-dark-xsm: 0 2rem 5rem rgba(0, 0, 0, .06);
 }
 
+$bp-largest:  75em; /* 1200px */
+$bp-large: 68.75em; /* 1100px */
+$bp-medium: 56.25em; /* 900px */
+$bp-small: 37.5em; /* 600px */
+$bp-xsmall: 26.25em; /* 420px */
+$bp-tiny: 14.375em; /* 230px */ 
+
 @keyframes pulsate {
     50% {
         transform: scale(1.05);
@@ -42,6 +49,18 @@ html {
 
     font-size: 62.5%;
     box-sizing: border-box;
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 52.5%;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 42.5%;
+    }
+
+    @media only screen and (max-width: $bp-xsmall) {
+        font-size: 37.5%;
+    }
 }
 
 body {
@@ -59,4 +78,10 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     line-height: 1.6;
+
+    overflow-x: hidden;
+
+    @media only screen and (max-width: $bp-small) {
+        padding: 0;
+    }
 }
